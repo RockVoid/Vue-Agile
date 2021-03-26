@@ -1,28 +1,47 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container-fluid p-0">
+    <nav class="navbar">
+      <router-link to="/" class="nav-link">Home</router-link>
+      <router-link to="/kanban" class="nav-link">Kanban</router-link>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.linkedin.com/in/roque-souza-costa-6aa8171ba/"
+        class="nav-link"
+        >LinkedIn</a
+      >
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.github.com/RockVoid"
+        class="nav-link"
+        >GitHub</a
+      >
+    </nav>
+    <div class="container-fluid p-0">
+      <router-view />
+    </div>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+<style scoped>
+.container-fluid {
+  background-color: #f5f6fa;
+  height: calc(100vh - 50px);
+  min-width: 400px;
+  max-width: 1080px;
 }
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.navbar {
+  background-color: #2e86de;
+  height: 50px;
+}
+
+.nav-link {
+  color: #f5f6fa;
+}
+
+.nav-link:hover {
+  color: #48dbfb;
 }
 </style>
